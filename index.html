@@ -1,11 +1,770 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeBourgeon</title>
+<!--
+  ============================================================================
+  IMAGES À INSÉRER DANS LE DOSSIER /images/
+  ----------------------------------------------------------------------------
+  01. hero-jardin.jpg ....................... Jardin rénové vu d'ensemble
+  02. service-renovation.jpg ................ Chantier de rénovation en cours
+  03. service-creation.jpg .................. Plan / conception paysagère
+  04. service-consultation.jpg .............. Diagnostic sur place avec client
+  05. service-terrasse.jpg .................. Terrasse / allée réalisée
+  06. service-plantation.jpg ................ Plantation par l'équipe
+  07. service-entretien.jpg ................. Taille / entretien annuel
+  08. realisation-1.jpg → realisation-6.jpg . Projets de jardins réalisés
+  09. pepiniere-arbres.jpg .................. Arbres en pépinière
+  10. pepiniere-vivaces.jpg ................. Vivaces en pépinière
+  11. pepiniere-fruitiers.jpg ............... Fruitiers en pépinière
+  12. apropos-equipe.jpg .................... Équipe au travail
+  13. infos-carte.jpg ....................... Plan d'accès / devanture
+  14. og-image.jpg .......................... Image réseaux sociaux (1200x630)
+  15. favicon.ico / favicon.svg ............. Favicon
+  ============================================================================
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===================== SEO PRINCIPAL ===================== -->
+<title>Rénovation de jardins & Pépinière | Le Bourgeon</title>
+<meta name="description" content="Rénovation complète de jardin, création paysagère, consultation et entretien. Pépinière familiale intégrée, devis gratuit, travaux garantis. Intervention dans toute la région.">
+<meta name="keywords" content="rénovation jardin, aménagement paysager, création jardin, paysagiste, consultation jardin, entretien jardin, pépinière, terrasse, allée, clôture, plantation">
+<meta name="author" content="Le Bourgeon — Pépinière & Rénovation de jardins">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#1e4620">
+<link rel="canonical" href="https://www.lafeuilleverte.fr/">
+
+<!-- SEO local (à adapter) -->
+<meta name="geo.region" content="FR">
+<meta name="geo.placename" content="Votre Ville">
+<meta name="ICBM" content="44.8378, -0.5792">
+
+<!-- ===================== PARTAGE RÉSEAUX SOCIAUX ===================== -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Le Bourgeon">
+<meta property="og:title" content="Rénovation de jardins & Pépinière | Le Bourgeon">
+<meta property="og:description" content="Rénovation complète, création paysagère, consultation et entretien de jardins. Devis gratuit, travaux garantis, pépinière intégrée.">
+<meta property="og:url" content="https://www.lafeuilleverte.fr/">
+<meta property="og:image" content="https://www.lafeuilleverte.fr/images/og-image.jpg">
+<meta property="og:image:alt" content="Jardin entièrement rénové par Le Bourgeon : pelouse, massifs et terrasse en bois">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rénovation de jardins & Pépinière | Le Bourgeon">
+<meta name="twitter:description" content="Rénovation complète, création paysagère, consultation et entretien de jardins. Devis gratuit.">
+<meta name="twitter:image" content="https://www.lafeuilleverte.fr/images/og-image.jpg">
+
+<!-- ===================== ICÔNES & PERFORMANCE ===================== -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preload" as="image" href="images/hero-jardin.jpg">
+
+<!-- ===================== FEUILLE DE STYLE ===================== -->
+<link rel="stylesheet" href="style.css">
+
+<!-- ===================== DONNÉES STRUCTURÉES (SEO LOCAL) ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LandscapingBusiness", "GardenStore"],
+      "@id": "https://www.lafeuilleverte.fr/#entreprise",
+      "name": "Le Bourgeon — Pépinière & Rénovation de jardins",
+      "description": "Entreprise de rénovation et d'aménagement de jardins : conception paysagère, consultation, réalisation de travaux, plantation et entretien. Pépinière familiale intégrée pour la fourniture des végétaux.",
+      "url": "https://www.lafeuilleverte.fr/",
+      "logo": "https://www.lafeuilleverte.fr/images/logo.png",
+      "image": "https://www.lafeuilleverte.fr/images/hero-jardin.jpg",
+      "telephone": "+33 5 56 00 00 00",
+      "email": "contact@lafeuilleverte.fr",
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Espèces, Carte bancaire, Chèque, Virement",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 chemin des Serres",
+        "addressLocality": "Votre Ville",
+        "postalCode": "33000",
+        "addressRegion": "Nouvelle-Aquitaine",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.8378,
+        "longitude": -0.5792
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 44.8378, "longitude": -0.5792 },
+        "geoRadius": "40000"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "12:30" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/lafeuilleverte",
+        "https://www.instagram.com/lafeuilleverte"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Nos prestations",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rénovation complète de jardin", "description": "Reprise intégrale d'un jardin existant : structure, sol, plantations et finitions." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Création et conception paysagère", "description": "Conception de plans, choix des végétaux et aménagement complet." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation et diagnostic jardin", "description": "Analyse du terrain, du sol et de l'exposition, recommandations personnalisées." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Terrasses, allées et clôtures", "description": "Travaux de maçonnerie paysagère : terrasses, allées, bordures et clôtures." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plantation et engazonnement", "description": "Mise en terre des végétaux, semis ou pose de gazon, paillage." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretien et taille annuelle", "description": "Taille des arbres et arbustes, entretien des massifs et des pelouses." } }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lafeuilleverte.fr/#site",
+      "url": "https://www.lafeuilleverte.fr/",
+      "name": "Le Bourgeon",
+      "inLanguage": "fr-FR",
+      "publisher": { "@id": "https://www.lafeuilleverte.fr/#entreprise" }
+    }
+  ]
+}
+</script>
 </head>
+
 <body>
-Bonjour
+
+<a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+<!-- ============================================================
+     EN-TÊTE
+     ============================================================ -->
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="#top" class="logo" aria-label="La Feuille Verte — retour en haut de page">
+      <svg class="logo-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
+        <circle cx="24" cy="24" r="23" fill="#eef4e8" stroke="#2f6b36" stroke-width="2"/>
+        <path d="M24 36V18" stroke="#2f6b36" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M24 26c0-6 4.5-10 11-10 0 6-4.5 10-11 10z" fill="#6aa84f"/>
+        <path d="M24 20c0-5-3.6-8.5-9-8.5 0 5 3.6 8.5 9 8.5z" fill="#2f6b36"/>
+      </svg>
+      <span class="logo-text">
+        Le Bourgeon
+        <small>Rénovation de jardins &amp; Pépinière</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button"
+            aria-expanded="false" aria-controls="menu-principal"
+            aria-label="Ouvrir le menu de navigation">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+
+    <nav id="menu-principal" class="main-nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#prestations">Prestations</a></li>
+        <li><a href="#methode">Notre méthode</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#pepiniere">Pépinière</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#infos">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta" href="tel:+33556000000">📞 Devis gratuit</a>
+    </nav>
+
+  </div>
+</header>
+
+<main id="contenu">
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" aria-labelledby="titre-principal">
+    <div class="container hero-inner">
+
+      <div class="hero-text">
+        <p class="eyebrow">Rénovation &amp; aménagement de jardins · Depuis 1998</p>
+        <h1 id="titre-principal">Votre jardin, repensé, rénové et planté par nos paysagistes</h1>
+        <p class="lead">
+          Rénovation complète, création paysagère, consultation ou entretien :
+          nous prenons en charge votre projet de bout en bout. Conception, travaux,
+          plantation et suivi — avec les végétaux de notre propre pépinière.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Demander un devis gratuit</a>
+          <a class="btn btn-ghost" href="#realisations">Voir nos réalisations</a>
+        </div>
+
+        <ul class="hero-points">
+          <li>Visite &amp; devis gratuits</li>
+          <li>Travaux garantis</li>
+          <li>Pépinière intégrée</li>
+        </ul>
+      </div>
+
+      <div class="hero-media media">
+        <img src="images/hero-jardin.jpg"
+             alt="Jardin entièrement rénové par Le Bourgeon : pelouse dense, massifs de vivaces, allée en gravier et terrasse en bois"
+             width="1200" height="960"
+             fetchpriority="high" decoding="async">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BANDEAU DE CONFIANCE
+       ============================================================ -->
+  <aside class="trust" aria-label="Nos engagements">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <span class="ic" aria-hidden="true">🌿</span>
+        <div><strong>Devis gratuit</strong><span>Visite et chiffrage offerts</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="ic" aria-hidden="true">🚜</span>
+        <div><strong>Rénovation clé en main</strong><span>De la conception à la plantation</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="ic" aria-hidden="true">👷</span>
+        <div><strong>Équipe qualifiée</strong><span>Paysagistes expérimentés &amp; assurés</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="ic" aria-hidden="true">✅</span>
+        <div><strong>Travaux garantis</strong><span>Végétaux garantis 1 an</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       PRESTATIONS
+       ============================================================ -->
+  <section id="prestations" class="section-creme" aria-labelledby="titre-prestations">
+    <div class="container">
+
+      <header class="section-head">
+        <p class="eyebrow">Nos prestations</p>
+        <h2 id="titre-prestations">Nous prenons votre jardin en charge, de A à Z</h2>
+        <p>Rénovation, conception, travaux, plantation, entretien : une seule équipe pour tout votre projet, avec des végétaux cultivés dans notre pépinière.</p>
+      </header>
+
+      <div class="grid-3">
+
+        <article class="card">
+          <div class="media">
+            <img src="images/service-renovation.jpg"
+                 alt="Chantier de rénovation de jardin en cours : terrain redessiné, ancienne pelouse retirée et nouvelles bordures tracées"
+                 width="800" height="550" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h3>Rénovation complète de jardin</h3>
+            <p>Nous reprenons tout : terrain, structure, sol, plantations et finitions. Idéal pour un jardin fatigué ou laissé à l'abandon.</p>
+            <a class="card-link" href="#contact">Demander un devis</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <img src="images/service-creation.jpg"
+                 alt="Plan d'aménagement paysager dessiné à la main avec annotations de massifs, allées et zones plantées"
+                 width="800" height="550" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h3>Création &amp; conception paysagère</h3>
+            <p>Plans, croquis, choix des végétaux et des matériaux : nous imaginons un jardin qui vous ressemble, adapté à votre terrain.</p>
+            <a class="card-link" href="#contact">Parler de mon projet</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <img src="images/service-consultation.jpg"
+                 alt="Paysagiste de Le Bourgeon réalisant un diagnostic sur place avec un client dans son jardin"
+                 width="800" height="550" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h3>Consultation &amp; diagnostic</h3>
+            <p>Analyse du sol, de l'exposition et de l'existant. Vous repartez avec des recommandations concrètes, même sans travaux.</p>
+            <a class="card-link" href="#contact">Réserver une visite</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <img src="images/service-terrasse.jpg"
+                 alt="Terrasse en bois et allée en gravier réalisées par l'équipe, bordées de massifs de graminées"
+                 width="800" height="550" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h3>Terrasses, allées &amp; clôtures</h3>
+            <p>Maçonnerie paysagère : terrasses, allées, bordures, clôtures et portails. Des espaces extérieurs structurés et durables.</p>
+            <a class="card-link" href="#contact">Voir les possibilités</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <img src="images/service-plantation.jpg"
+                 alt="Équipe de jardiniers plantant un jeune arbre dans un massif fraîchement préparé"
+                 width="800" height="550" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h3>Plantation &amp; engazonnement</h3>
+            <p>Mise en terre soignée, semis ou pose de gazon, paillage et arrosage initial. Les végétaux viennent de notre pépinière.</p>
+            <a class="card-link" href="#contact">Planifier la plantation</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <img src="images/service-entretien.jpg"
+                 alt="Jardinier taillant une haie et un arbuste lors d'une prestation d'entretien annuel"
+                 width="800" height="550" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h3>Entretien &amp; taille annuelle</h3>
+            <p>Contrats d'entretien à l'année : taille, élagage, désherbage, tonte et soins saisonniers pour garder un jardin impeccable.</p>
+            <a class="card-link" href="#contact">Demander un contrat</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NOTRE MÉTHODE
+       ============================================================ -->
+  <section id="methode" aria-labelledby="titre-methode">
+    <div class="container">
+
+      <header class="section-head">
+        <p class="eyebrow">Notre méthode</p>
+        <h2 id="titre-methode">Votre projet, étape par étape</h2>
+        <p>Une démarche claire et sans surprise, du premier appel à la remise des clés de votre nouveau jardin.</p>
+      </header>
+
+      <div class="steps">
+
+        <article class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Premier échange</h3>
+          <p>Vous nous appelez ou remplissez le formulaire. Nous cernons votre besoin et fixons un rendez-vous.</p>
+        </article>
+
+        <article class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Visite &amp; diagnostic</h3>
+          <p>Nous venons sur place étudier le terrain, le sol, l'exposition et discuter de vos envies. C'est gratuit.</p>
+        </article>
+
+        <article class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Conception &amp; devis</h3>
+          <p>Nous vous remettons un plan, une sélection de végétaux et un devis détaillé, poste par poste.</p>
+        </article>
+
+        <article class="step">
+          <span class="step-num" aria-hidden="true">4</span>
+          <h3>Réalisation des travaux</h3>
+          <p>Notre équipe intervient selon le planning convenu. Chantier propre, matériaux de qualité, délais tenus.</p>
+        </article>
+
+        <article class="step">
+          <span class="step-num" aria-hidden="true">5</span>
+          <h3>Suivi &amp; entretien</h3>
+          <p>Nous restons disponibles après le chantier et vous proposons un contrat d'entretien pour la suite.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RÉALISATIONS
+       ============================================================ -->
+  <section id="realisations" class="section-creme" aria-labelledby="titre-realisations">
+    <div class="container">
+
+      <header class="section-head">
+        <p class="eyebrow">Nos réalisations</p>
+        <h2 id="titre-realisations">Des jardins transformés, chez nos clients</h2>
+        <p>Quelques projets récents : rénovations complètes, créations, terrasses et aménagements paysagers.</p>
+      </header>
+
+      <div class="gallery">
+        <figure class="media">
+          <img src="images/realisation-1.jpg"
+               alt="Jardin de ville rénovation complète : petite pelouse, massifs de vivaces et terrasse en bois"
+               width="700" height="700" loading="lazy" decoding="async">
+        </figure>
+        <figure class="media">
+          <img src="images/realisation-2.jpg"
+               alt="Jardin contemporain avec allée en pas japonais, graminées et éclairage extérieur"
+               width="700" height="700" loading="lazy" decoding="async">
+        </figure>
+        <figure class="media">
+          <img src="images/realisation-3.jpg"
+               alt="Rénovation d'une grande pelouse avec nouvelle bordure et massif d'arbustes persistants"
+               width="700" height="700" loading="lazy" decoding="async">
+        </figure>
+        <figure class="media">
+          <img src="images/realisation-4.jpg"
+               alt="Création d'une terrasse en pierre naturelle avec jardinières intégrées et plantes aromatiques"
+               width="700" height="700" loading="lazy" decoding="async">
+        </figure>
+        <figure class="media">
+          <img src="images/realisation-5.jpg"
+               alt="Aménagement d'un jardin de campagne : potager, verger et haie champêtre plantés par l'équipe"
+               width="700" height="700" loading="lazy" decoding="async">
+        </figure>
+        <figure class="media">
+          <img src="images/realisation-6.jpg"
+               alt="Jardin de curé redessiné avec buis taillés, graviers clairs et mobilier en fer forgé"
+               width="700" height="700" loading="lazy" decoding="async">
+        </figure>
+        <figure class="media">
+          <img src="images/realisation-5.jpg"
+               alt="Aménagement d'un jardin de campagne : potager, verger et haie champêtre plantés par l'équipe"
+               width="700" height="700" loading="lazy" decoding="async">
+        </figure>
+        <figure class="media">
+          <img src="images/realisation-6.jpg"
+               alt="Jardin de curé redessiné avec buis taillés, graviers clairs et mobilier en fer forgé"
+               width="700" height="700" loading="lazy" decoding="async">
+        </figure>
+      </div>
+
+      <p class="center-cta">
+        <a class="btn btn-primary" href="#contact">Démarrer mon projet</a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PÉPINIÈRE
+       ============================================================ -->
+  <section id="pepiniere" aria-labelledby="titre-pepiniere">
+    <div class="container">
+
+      <header class="section-head">
+        <p class="eyebrow">Notre pépinière</p>
+        <h2 id="titre-pepiniere">Une pépinière intégrée, au service de vos projets</h2>
+        <p>Parce que nous produisons nos propres végétaux, nous maîtrisons la qualité, les variétés et les délais — un vrai atout pour vos chantiers.</p>
+      </header>
+
+      <div class="grid-3">
+
+        <article class="card">
+          <div class="media">
+            <img src="images/pepiniere-arbres.jpg"
+                 alt="Jeunes arbres et arbustes en pots alignés dans la pépinière Le Bourgeon"
+                 width="800" height="550" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h3>Arbres &amp; arbustes</h3>
+            <p>Essences locales et adaptées, cultivées sur place. Idéales pour structurer un jardin ou créer une haie.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <img src="images/pepiniere-vivaces.jpg"
+                 alt="Massif de plantes vivaces en fleurs dans la pépinière, prêtes à être plantées"
+                 width="800" height="550" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h3>Vivaces &amp; graminées</h3>
+            <p>Des massifs qui reviennent chaque année, faciles d'entretien et favorables aux pollinisateurs.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media">
+            <img src="images/pepiniere-fruitiers.jpg"
+                 alt="Arbres fruitiers (pommier, poirier, cerisier) en pots, tuteurés, dans la pépinière"
+                 width="800" height="550" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body">
+            <h3>Arbres fruitiers</h3>
+            <p>Variétés anciennes et contemporaines pour créer un verger ou planter un fruitier isolé.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="center-cta">
+        <a class="btn btn-ghost" href="#contact">Venir à la pépinière</a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       À PROPOS
+       ============================================================ -->
+  <section id="apropos" class="section-creme" aria-labelledby="titre-apropos">
+    <div class="container about-inner">
+
+      <div class="about-text">
+        <p class="eyebrow">Notre histoire</p>
+        <h2 id="titre-apropos">Une équipe de paysagistes, une pépinière familiale</h2>
+        <p>
+          Depuis 1998, notre famille cultive des végétaux sur 4 hectares et réalise des jardins
+          chez des particuliers et des professionnels. Cette double casquette fait toute la
+          différence : nous concevons avec ce que nous savons produire, et nous plantons avec
+          ce que nous avons cultivé.
+        </p>
+        <p>
+          Rénovation complète, création, consultation ou simple entretien : chaque projet est
+          mené par la même équipe, du premier coup de crayon à la dernière plantation.
+        </p>
+
+        <div class="stats">
+          <div class="stat"><strong>25+</strong><span>années d'expérience</span></div>
+          <div class="stat"><strong>400+</strong><span>jardins transformés</span></div>
+          <div class="stat"><strong>4 ha</strong><span>de pépinière locale</span></div>
+        </div>
+
+        <a class="btn btn-primary" href="#contact">Parler de mon projet</a>
+      </div>
+
+      <div class="media">
+        <img src="images/apropos-equipe.jpg"
+             alt="L'équipe de Le Bourgeon au travail dans la pépinière, entre serres et plants en pots"
+             width="1000" height="800" loading="lazy" decoding="async">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AVIS CLIENTS
+       ============================================================ -->
+  <section id="avis" aria-labelledby="titre-avis">
+    <div class="container">
+
+      <header class="section-head">
+        <p class="eyebrow">Ils nous font confiance</p>
+        <h2 id="titre-avis">Ce que disent nos clients</h2>
+      </header>
+
+      <div class="grid-3">
+
+        <figure class="avis">
+          <p class="etoiles" aria-label="Note : 5 étoiles sur 5">★★★★★</p>
+          <blockquote>« Notre jardin était laissé à l'abandon depuis des années. L'équipe a tout repris : terrain, pelouse, massifs et terrasse. Résultat magnifique, on ne reconnaît plus la maison. »</blockquote>
+          <figcaption><strong>Sophie &amp; Julien M.</strong>Rénovation complète · Votre Ville</figcaption>
+        </figure>
+
+        <figure class="avis">
+          <p class="etoiles" aria-label="Note : 5 étoiles sur 5">★★★★★</p>
+          <blockquote>« Devis clair, planning tenu, chantier propre. La consultation préalable nous a fait économiser beaucoup d'erreurs. Je recommande sans hésiter. »</blockquote>
+          <figcaption><strong>Marc D.</strong>Création paysagère · Agglomération</figcaption>
+        </figure>
+
+        <figure class="avis">
+          <p class="etoiles" aria-label="Note : 5 étoiles sur 5">★★★★★</p>
+          <blockquote>« Nous faisons appel à Le Bourgeon pour l'entretien annuel de notre parc d'entreprise. Sérieux, ponctuels, et un vrai souci du détail. »</blockquote>
+          <figcaption><strong>Claire V.</strong>Contrat d'entretien · Entreprise</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INFOS PRATIQUES
+       ============================================================ -->
+  <section id="infos" class="section-creme" aria-labelledby="titre-infos">
+    <div class="container">
+
+      <header class="section-head">
+        <p class="eyebrow">Nous contacter</p>
+        <h2 id="titre-infos">Horaires, adresse et zone d'intervention</h2>
+      </header>
+
+      <div class="infos-inner">
+
+        <div class="infos-text">
+
+          <div class="info-bloc">
+            <h3>Adresse</h3>
+            <p>
+              Le Bourgeon<br>
+              12 chemin des Serres<br>
+              33000 Votre Ville, France
+            </p>
+          </div>
+
+          <div class="info-bloc">
+            <h3>Contact</h3>
+            <p>
+              Téléphone : <a href="tel:+33556000000">05 56 00 00 00</a><br>
+              E-mail : <a href="mailto:contact@lafeuilleverte.fr">contact@lafeuilleverte.fr</a>
+            </p>
+          </div>
+
+          <div class="info-bloc">
+            <h3>Zone d'intervention</h3>
+            <p>Chantiers réalisés dans un rayon de 40 km autour de Votre Ville, et au-delà sur devis.</p>
+          </div>
+
+          <div class="info-bloc">
+            <h3>Horaires</h3>
+            <table class="horaires">
+              <caption class="sr-only">Horaires d'ouverture</caption>
+              <tbody>
+                <tr><th scope="row">Lundi</th><td class="ferme">Fermé</td></tr>
+                <tr><th scope="row">Mardi au vendredi</th><td>9h00 – 18h30</td></tr>
+                <tr><th scope="row">Samedi</th><td>9h00 – 19h00</td></tr>
+                <tr><th scope="row">Dimanche</th><td>10h00 – 12h30</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <a class="btn btn-primary" href="#contact">Demander un devis</a>
+
+        </div>
+
+        <div class="media">
+          <img src="images/infos-carte.jpg"
+               alt="Plan d'accès à Le Bourgeon, au 12 chemin des Serres, avec parking gratuit et entrée signalée"
+               width="900" height="760" loading="lazy" decoding="async">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DEVIS / CONTACT
+       ============================================================ -->
+  <section id="contact" aria-labelledby="titre-cta">
+    <div class="container">
+      <div class="cta-box">
+
+        <h2 id="titre-cta">Demandez votre devis gratuit</h2>
+        <p>
+          Décrivez-nous votre projet en quelques lignes : nous vous rappelons sous 48 h
+          pour convenir d'une visite sur place. Étude et chiffrage offerts, sans engagement.
+        </p>
+
+        <form class="devis-form" novalidate>
+          <label class="sr-only" for="nom">Votre nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="name" required>
+
+          <label class="sr-only" for="tel">Votre téléphone</label>
+          <input type="tel" id="tel" name="tel" placeholder="Téléphone" autocomplete="tel">
+
+          <label class="sr-only" for="email-devis">Votre e-mail</label>
+          <input type="email" id="email-devis" name="email" placeholder="votre@email.fr" autocomplete="email" required>
+
+          <label class="sr-only" for="sujet">Type de projet</label>
+          <input type="text" id="sujet" name="sujet" placeholder="Type de projet (rénovation, création, entretien…)">
+
+          <label class="sr-only" for="message">Décrivez votre projet</label>
+          <textarea id="message" name="message" class="full" placeholder="Décrivez votre projet en quelques lignes…" required></textarea>
+
+          <button class="btn btn-clair" type="submit">Envoyer ma demande</button>
+        </form>
+
+        <p class="form-message" role="status" aria-live="polite"></p>
+        <p class="form-note">
+          Vos données restent confidentielles et ne sont jamais transmises à des tiers.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     PIED DE PAGE
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-about">
+        <div class="footer-logo">
+          <svg class="logo-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="24" cy="24" r="23" fill="#214a24" stroke="#6aa84f" stroke-width="2"/>
+            <path d="M24 36V18" stroke="#a9d18e" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M24 26c0-6 4.5-10 11-10 0 6-4.5 10-11 10z" fill="#6aa84f"/>
+            <path d="M24 20c0-5-3.6-8.5-9-8.5 0 5 3.6 8.5 9 8.5z" fill="#a9d18e"/>
+          </svg>
+          <span class="logo-text">Le Bourgeon<small>Rénovation de jardins &amp; Pépinière</small></span>
+        </div>
+        <p>Paysagistes et pépiniéristes depuis 1998. Rénovation, création et entretien de jardins dans toute la région.</p>
+
+        <div class="reseaux">
+          <a href="https://www.facebook.com/lafeuilleverte" aria-label="Notre page Facebook" rel="noopener">Fb</a>
+          <a href="https://www.instagram.com/lafeuilleverte" aria-label="Notre compte Instagram" rel="noopener">Ig</a>
+          <a href="https://www.google.com/maps" aria-label="Nous trouver sur Google Maps" rel="noopener">Map</a>
+        </div>
+      </div>
+
+      <nav aria-label="Nos prestations">
+        <h4>Prestations</h4>
+        <ul>
+          <li><a href="#prestations">Rénovation complète</a></li>
+          <li><a href="#prestations">Création &amp; conception</a></li>
+          <li><a href="#prestations">Consultation &amp; diagnostic</a></li>
+          <li><a href="#prestations">Terrasses &amp; allées</a></li>
+          <li><a href="#prestations">Plantation</a></li>
+          <li><a href="#prestations">Entretien &amp; taille</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Informations">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="#realisations">Réalisations</a></li>
+          <li><a href="#pepiniere">Notre pépinière</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#avis">Avis clients</a></li>
+          <li><a href="#methode">Notre méthode</a></li>
+          <li><a href="#contact">Devis gratuit</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>12 chemin des Serres<br>33000 Votre Ville</li>
+          <li><a href="tel:+33556000000">05 56 00 00 00</a></li>
+          <li><a href="mailto:contact@lafeuilleverte.fr">contact@lafeuilleverte.fr</a></li>
+          <li>Zone : 40 km autour de Votre Ville</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="annee">2025</span> Le Bourgeon — Rénovation de jardins &amp; Pépinière. Tous droits réservés.</p>
+      <ul>
+        <li><a href="#top">Mentions légales</a></li>
+        <li><a href="#top">Politique de confidentialité</a></li>
+        <li><a href="#top">Plan du site</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     SCRIPT
+     ============================================================ -->
+<script src="script.js" defer></script>
+
 </body>
 </html>
